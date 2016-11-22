@@ -1,4 +1,7 @@
-# xpath Version :: 0.9.9
+# Xpath Version :: 0.9.9
+# [Live Preview] (https://yaknazim.github.io/xpath/)
+# [Download desktop version] (https://github.com/YakNazim/xpath/releases)
+
 
 # About Xpath App
 
@@ -16,10 +19,10 @@ This application was coded in HTML / JavaScript, and uses the following librarie
 # Developeers : 
 * Yakhou Nazim 
 * Skoudarli Abdeslam 
-* Mehdi 
-* Brahim
+* Mahdi Abderrahmane 
+* Laiche ibrahim
 * Zitouni Yanis
-* Adelane Serrir ElHetissi
+* Adelane Serir El EHirtsi
 
 # Support
 Unfortunately, there is no active support. You may contact devs for additional informations
