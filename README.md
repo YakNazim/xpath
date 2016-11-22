@@ -17,7 +17,7 @@ This application was coded in HTML / JavaScript, and uses the following librarie
 * Fonts from fontawesome
 
 # Developers : 
-* Yakhou Nazim  @yaknazim
+* Yakhou Nazim 
 * Skoudarli Abdeslam 
 * Mahdi Abderrahmane 
 * Laiche ibrahim
