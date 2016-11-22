@@ -30,5 +30,5 @@ Unfortunately, there is no active support. You may contact devs for additional i
 #License : 
 GPL - 3.0
 
-Thank you for testing it. We hope you enjoy it.
+##Thank you for testing it. We hope you enjoy it.
 
