@@ -1,0 +1,19 @@
+{
+  "name": "xpath-app",
+  "version": "0.9.8",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "pretty-bytes": "^2.0.1"
+
+  },
+  "devDependencies": {
+    "electron-prebuilt": "0.35.6",
+	"gulp-header": "1.8.2"
+  },
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "author": "Nazim Yakhou",
+  "license": "GPL"
+}

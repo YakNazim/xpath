@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+
+	<title>Xpath App</title>
+</head>
+
+
+<body oncontextmenu="return false;">
+
+	<div id="sidenav" class="sidenav">
+		<div class="menu_button" id="menu_button">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<a href="#" id="new">New</a>
+		<label for="file-upload" class="custom-file-upload" id="open">
+			Open
+		</label>
+		<input id="file-upload" type="file" />
+
+
+		<a href="#" id="save">Save</a>
+		<a href="#" id="export">Export</a>
+		<a href="#" id="about">About</a>
+
+	</div>
+
+	<div id="main">
+
+		<label class="switch">
+			<input type="checkbox" id="chkbx">
+			<div class="slider"></div>
+		</label>
+
+		<div class="icon-bar">
+			<a href="#" id="toolBar_addNode" title="Add a node"><i class="fa fa-plus-circle"></i></a>
+			<a href="#" id="toolBar_remNode" title="Remove existing node"><i class="fa fa-minus-circle"></i></a>
+			<a href="#" id="toolBar_addEdge" title="Add an edge"><i class="fa fa-link"></i></a>
+			<a href="#" id="toolBar_remEdge"><i class="fa fa-chain-broken" title="Remove an edge"></i></a>
+		</div>
+
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header" id="modal-header">
+					<span class="close">&times</span>
+					<h2 id="modal_txt"></h2>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<!-- View 1 Graphic View (default) -->
+		<div id="graphic_view">
+			<div id="cy">
+
+
+			</div>
+
+
+
+		</div>
+
+		<!-- View 2 : data view -->
+		<div id="data_view">
+
+			<div id="orderContainer">
+
+
+			</div>
+
+
+			<div id="tbleContainer">
+
+
+			</div>
+			<div id="degTableContainer">
+
+			</div>
+			<div id="voisinsTableContainer">
+
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+
+
+	<!-- The about_modal -->
+	<div id="myabout_modal" class="about_modal">
+
+		<!-- about_modal content -->
+		<div class="about_modal-content">
+			<div class="about_modal-header">
+				<span class="myabout-close">×</span>
+				<h2>About Xpath App</h2>
+			</div>
+			<div class="about_modal-body">
+				<p>Xpath is an application for graph representation and processing.</p>
+
+				<p>This application was designed by students from ENP Algiers, in an experimental and educational purposes, as part of the teaching of the theory of graphs</p>
+				<p>This application has been coded in HTML / JavaScript, and uses the following libraries:
+					<br> - Cytoscape.js
+					<br> - FileSaver.js
+					<br> - Electron API
+					<br>
+				</p>
+				<p>
+					No support is provided with the application! Thank you for testing it. We hope you enjoy it.</p>
+			</div>
+			<div class="about_modal-footer">
+				<h3>Version :: 0.9.9</h3>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- Same class ie same style
+	But different content -->
+
+	<!-- The add_node -->
+
+	<div class="modal" id="add_node_modal">
+		<div class="header">
+			<span class="close" id="close_add_node_modal">×</span>
+			<h2>Add node</h2>
+		</div>
+		<div class="body">
+
+			<label for="add_node_modal_id">Node ID :</label>
+			<input type="text" name="add_node_modal" id="add_node_modal_id" placeholder="Ex: A" autofocus>
+			<br/>
+			<span class="modal_err" id="add_node_modal_err">Please enter an UNIQUE and valide ID</span>
+			<br/>
+			<button id="add_node_modal_go" class="go_button">GO</button>
+
+
+
+
+			<br>
+		</div>
+	</div>
+
+
+	<!-- The remove node -->
+
+
+	<div class="modal" id="rem_node_modal">
+
+		<div class="header">
+			<span class="close" id="close_rem_node_modal">×</span>
+			<h2>Remove node</h2>
+		</div>
+		<div class="body">
+
+			<label for="rem_node_modal_id">Node ID :</label>
+			<select id="rem_node_modal_id"></select>
+			<br/>
+			<br/>
+
+
+
+			<button id="rem_node_modal_id_go" class="go_button">GO</button>
+
+
+		</div>
+	</div>
+
+	<!-- The add edge node -->
+
+
+	<div class="modal" id="add_edge_modal">
+		<div class="header">
+			<span class="close" id="close_add_edge_modal">×</span>
+			<h2>Add edge</h2>
+		</div>
+		<div class="body">
+
+			<label for="add_edge_modal_id">Edge ID :</label>
+			<input type="text" name="add_edge_modal_id" id="add_edge_modal_id" placeholder="Ex: A_B" autofocus>
+			<br/>
+			<span class="modal_err" id="add_edge_modal_id_err">Please enter an UNIQUE and valide ID</span>
+			<br/>
+			<label for="add_edge_modal_weight">Weight :</label>
+			<input type="number" id="add_edge_modal_weight" min="1" max="10000" value="0">
+			<span class="modal_err" id="add_edge_modal_weight_err">Weight must be comprised between 1v and 10000 </span>
+			<br/>
+			<br/>
+			<label for="add_edge_modal_pred_id">Pred ID :</label>
+			<select id="add_edge_modal_pred_id"></select>
+			<br/>
+			<br>
+
+			<label for="add_edge_modal_succ_id">Succ ID :</label>
+			<select id="add_edge_modal_succ_id"></select>
+			<br/>
+			<br/>
+
+
+
+			<button id="add_edge_modal_go" class="go_button">GO</button>
+
+		</div>
+	</div>
+
+	<!-- The remove edge -->
+
+
+	<div class="modal" id="rem_edge_modal">
+		<div class="header">
+			<span class="close" id="close_rem_edge_modal">×</span>
+			<h2>Remove Edge</h2>
+		</div>
+		<div class="body">
+
+			<label for="rem_edge_modal_id">Edge ID :</label>
+			<select id="rem_edge_modal_id"></select>
+			<br/>
+			<br/>
+
+			<button id="rem_edge_modal_id_go" class="go_button">GO</button>
+
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+	 
+	<script src="js/FileSaver.js"></script>
+	<script src="js/cytoscape.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
