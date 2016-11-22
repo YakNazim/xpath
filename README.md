@@ -22,7 +22,7 @@ This application was coded in HTML / JavaScript, and uses the following librarie
 * Mahdi Abderrahmane 
 * Laiche ibrahim
 * Zitouni Yanis
-* Adelane Serir El EHirtsi
+* Adelane Serir El Hirtsi
 
 # Support
 Unfortunately, there is no active support. You may contact devs for additional informations
