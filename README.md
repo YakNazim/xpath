@@ -16,8 +16,8 @@ This application was coded in HTML / JavaScript, and uses the following librarie
 * Electron API
 * Fonts from fontawesome
 
-# Developeers : 
-* Yakhou Nazim 
+# Developers : 
+* Yakhou Nazim  @yaknazim
 * Skoudarli Abdeslam 
 * Mahdi Abderrahmane 
 * Laiche ibrahim
