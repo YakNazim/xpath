@@ -1,4 +1,4 @@
-# Xpath Version :: 0.9.9
+# Xpath Version :: 0.9.9.1
 # [View Online] (https://yaknazim.github.io/xpath/)
 # [Download desktop version] (https://github.com/YakNazim/xpath/releases)
 
